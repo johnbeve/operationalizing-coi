@@ -10,7 +10,7 @@ The goal of the Operationalizing Ontologies COI is to provide guidance on how to
 
 This document provides advice on OWL ecosystem tools, architectures, and applied automated reasoning tools. The figure below shows typical generic components in an ontology-based architecture along with examples of tools and frameworks that can instantiate those components. The knowledge graph component is sometimes called an RDF triple store. The commercial world of ontology tools and applications is rapidly evolving (see [knowledgegraph.tech](https://www.knowledgegraph.tech/)).
 
-![OWL Ecosystem](file-Erm0mePKAzWV1bBecAfH8RvW)
+![OWL Ecosystem](https://github.com/johnbeve/operationalizing-coi/blob/main/docs/assets/owl-ecosystem.png)
 
 ## Related Technologies
 This section describes languages and tools that may be used in conjunction with OWL, RDF, and SPARQL to build an application.
