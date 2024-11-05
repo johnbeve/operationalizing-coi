@@ -112,12 +112,3 @@ Speer, R., Chin, J., & Havasi, C. (2017, February). Conceptnet 5.5: An open mult
 Zellers, R., Bisk, Y., Schwartz, R., & Choi, Y. (2018). Swag: A large-scale adversarial dataset for grounded commonsense inference. arXiv preprint arXiv:1808.05326.
 
 Zhu, Y., Jankay, R. R., Pieratt, L. C., & Mehta, R. K. (2017, September). Wearable sensors and their metrics for measuring comprehensive occupational fatigue: a scoping review. In Proceedings of the Human Factors and Ergonomics Society Annual Meeting (Vol. 61, No. 1, pp. 1041-1045).
-
-## Appendix A: Generic Architectures for Ontology Applications (ERIC P)
-The diagram below shows a generic OWL application architecture. Applications like those listed in the sections above can query a knowledge graph. Preexisting services or systems A and B can interoperate via a shared ontology that contains mappings between classes and properties.
-
-![Architecture 1](https://github.com/johnbeve/operationalizing-coi/blob/main/docs/assets/generic-arch-1.png)
-
-The diagram below shows a generic OWL backend architecture. Structured and unstructured text data can be ingested into the knowledge graph to support queries of heterogeneous sources.
-
-![Architecture 2](https://github.com/johnbeve/operationalizing-coi/blob/main/docs/assets/generic-arch-2.png)
