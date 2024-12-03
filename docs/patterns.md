@@ -113,17 +113,17 @@ Embed existing knowledge from ontologies and rules into deep neural networks so 
 
 ## References
 
-[^1]Allen, J. P., & DiBona, P. (2004, June). Plan Understanding: Inferring Implicit Dependencies from Explicit Elements in Multi-Agent Plan Representations. In IC-AI (pp. 379-385).
-[^2]Arp, Smith, Spear, Building Ontologies with Basic Formal Ontology Robert Arp, MIT Press 2015
-[^3]Bhattacharya, N., Rakshit, S., Gwizdka, J., & Kogut, P. (2020). Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks. In 2020 Conference on Human Information Interaction and Retrieval (CHIIR ’20), March, 2020, Vancouver, BC
-[^4]Can, Y. S., Chalabianloo, N., Ekiz, D., & Ersoy, C. (2019). Continuous stress detection using wearable sensors in real life: Algorithmic programming contest case study. Sensors, 19(8), 1849.
-[^5]Kendall and McGuinness, Ontology Engineering, Morgan & Claypool Publishers 2019
-[^6]Karpathy 2023  https://karpathy.ai/stateofgpt.pdf
-[^7]Kautz 2021 “The Third AI Summer”  https://henrykautz.com/talks/index.html 
-[^8]Marcus, G., & Davis, E. (2019). Rebooting AI: Building Artificial Intelligence We Can Trust. Pantheon.
-[^9]Marcus, G. (2020). The next decade in AI: four steps towards robust artificial intelligence. arXiv preprint arXiv:2002.06177.
-[^10]Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302.
-[^11]Sap, M., Le Bras, R., Allaway, E., Bhagavatula, C., Lourie, N., Rashkin, H., ... & Choi, Y. (2019, July). Atomic: An atlas of machine commonsense for if-then reasoning. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 33, pp. 3027-3035).
-[^12]Speer, R., Chin, J., & Havasi, C. (2017, February). Conceptnet 5.5: An open multilingual graph of general knowledge. In Thirty-First AAAI Conference on Artificial Intelligence.
-[^13]Zellers, R., Bisk, Y., Schwartz, R., & Choi, Y. (2018). Swag: A large-scale adversarial dataset for grounded commonsense inference. arXiv preprint arXiv:1808.05326.
-[^14]Zhu, Y., Jankay, R. R., Pieratt, L. C., & Mehta, R. K. (2017, September). Wearable sensors and their metrics for measuring comprehensive occupational fatigue: a scoping review. In Proceedings of the Human Factors and Ergonomics Society Annual Meeting (Vol. 61, No. 1, pp. 1041-1045).
+[^1]: Allen, J. P., & DiBona, P. (2004, June). Plan Understanding: Inferring Implicit Dependencies from Explicit Elements in Multi-Agent Plan Representations. In IC-AI (pp. 379-385).
+[^2]: Arp, Smith, Spear, Building Ontologies with Basic Formal Ontology Robert Arp, MIT Press 2015
+[^3]: Bhattacharya, N., Rakshit, S., Gwizdka, J., & Kogut, P. (2020). Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks. In 2020 Conference on Human Information Interaction and Retrieval (CHIIR ’20), March, 2020, Vancouver, BC
+[^4]: Can, Y. S., Chalabianloo, N., Ekiz, D., & Ersoy, C. (2019). Continuous stress detection using wearable sensors in real life: Algorithmic programming contest case study. Sensors, 19(8), 1849.
+[^5]: Kendall and McGuinness, Ontology Engineering, Morgan & Claypool Publishers 2019
+[^6]: Karpathy 2023  https://karpathy.ai/stateofgpt.pdf
+[^7]: Kautz 2021 “The Third AI Summer”  https://henrykautz.com/talks/index.html 
+[^8]: Marcus, G., & Davis, E. (2019). Rebooting AI: Building Artificial Intelligence We Can Trust. Pantheon.
+[^9]: Marcus, G. (2020). The next decade in AI: four steps towards robust artificial intelligence. arXiv preprint arXiv:2002.06177.
+[^10]: Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302.
+[^11]: Sap, M., Le Bras, R., Allaway, E., Bhagavatula, C., Lourie, N., Rashkin, H., ... & Choi, Y. (2019, July). Atomic: An atlas of machine commonsense for if-then reasoning. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 33, pp. 3027-3035).
+[^12]: Speer, R., Chin, J., & Havasi, C. (2017, February). Conceptnet 5.5: An open multilingual graph of general knowledge. In Thirty-First AAAI Conference on Artificial Intelligence.
+[^13]: Zellers, R., Bisk, Y., Schwartz, R., & Choi, Y. (2018). Swag: A large-scale adversarial dataset for grounded commonsense inference. arXiv preprint arXiv:1808.05326.
+[^14]: Zhu, Y., Jankay, R. R., Pieratt, L. C., & Mehta, R. K. (2017, September). Wearable sensors and their metrics for measuring comprehensive occupational fatigue: a scoping review. In Proceedings of the Human Factors and Ergonomics Society Annual Meeting (Vol. 61, No. 1, pp. 1041-1045).
