@@ -10,7 +10,8 @@ The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to
 
 This document contains a list of common domain-independent ontology application patterns and associated appropriate architectures. We are using the term “application pattern” instead of “use case” because use case often refers to aspects of applications related to domain-specific ontologies (e.g., air defense, aircraft maintenance, etc.). Most of the patterns listed below are fairly general and not focused on specific missions or equipment.
 
-This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see Guidance for Ontology-based Systems Development). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
+> [!NOTE]
+> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see Guidance for Ontology-based Systems Development). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
 
 ## Application Patterns
 
