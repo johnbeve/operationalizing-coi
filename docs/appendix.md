@@ -1,5 +1,9 @@
 # Appendix
 
+## Terminology
+
+
+
 ## Training Materials
 
 These materials will help the user with applying the operationalizing ontology patterns across varying levels of technical and academic acuity.
