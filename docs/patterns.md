@@ -29,8 +29,10 @@ This is not meant to be a formal ontology of application patterns: the patterns 
 The patterns are templated into the following baseline fields:
 
 * [competency questions](https://arxiv.org/pdf/2412.13688) which help scope, validate, establish, relate, or contextualize the pattern.
-* key terms associated with the pattern.
-* descriptions of the pattern.
+* classes or relationships the pattern exhibits in part as aligned to more high-level, abstract concepts.
+* disambiguation exposes the logic of what a thing is a thing in the pattern.
+* key terms associated with the pattern using common terms used by subject matter experts.
+* descriptions of the pattern in simple, approachable, translatable language (e.g., technical language that avoids jargon).
 * use cases in which the pattern has or can be applied including relevant rules.
 
 ### Data Fabric
@@ -38,6 +40,10 @@ The patterns are templated into the following baseline fields:
 * Competency questions
   * How is data connected?
   * What systems allow connection of data assets?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * data, metadata, cloud compute
 * Description
@@ -53,6 +59,10 @@ The patterns are templated into the following baseline fields:
   * What kind of information must be transferred between communication systems?
   * Who is operating the communication systems?
   * Where are the communication systems located?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * battlefield, communications, interoperability
 * Description
@@ -70,6 +80,10 @@ The patterns are templated into the following baseline fields:
   * Is there triple store or dyadic data pattern?
   * Is the the query type a traversal?
   * Is connection between entities the primary goal of analysis?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * knowledge graph, relationships, dyad, triple, property, RDF
 * Description
@@ -85,6 +99,10 @@ The patterns are templated into the following baseline fields:
   * Where are my data stored?
   * Who has access to what data assets?
   * When was the data loaded, accessed, or depricated?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * data, catalog, metadata, security, user, mart
 * Description
@@ -99,6 +117,10 @@ The patterns are templated into the following baseline fields:
   * Who answers these types of questions?
   * What skills are needed to answer questions?
   * What constraints do you have on questions?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * answering system, digital assistant, agent, LLM
 * Description
@@ -114,6 +136,10 @@ The patterns are templated into the following baseline fields:
   * What skills are needed to assess training data?
   * Where is the training data located?
   * How is the data being modeled?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * training data, machine learning, deep learning, classification
 * Description
@@ -130,6 +156,10 @@ The patterns are templated into the following baseline fields:
   * What are the limits upon which the topic is being reasoned?
   * Who is involved in the reasoning process?
   * How is reasoning being performed?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * reasoning, deduction, inference, decision-making, data, logic
 * Description
@@ -145,6 +175,10 @@ The patterns are templated into the following baseline fields:
   * How is checking of robustness performed?
   * What are the constraints of the neural network?
   * What is being monitored?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * neural network, data, monitoring, testing
 * Description
@@ -158,6 +192,10 @@ The patterns are templated into the following baseline fields:
   * What about the AI needs to be explained?
   * How is explaination affecting the AI?
   * What will explaination of the AI do?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * artificial intelligence, oversight, algorithms
 * Description
@@ -171,6 +209,10 @@ The patterns are templated into the following baseline fields:
   * What services need orchestration?
   * What things will be orchestrated?
   * Where will this orchestration occur?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * services, pipelines, API, architecture, information technology
 * Description
@@ -185,6 +227,10 @@ The patterns are templated into the following baseline fields:
   * What faults do these systems incur?
   * How are faults identified?
   * How is monitoring performed?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * monitoring, faults, errors, diagnosis, troubleshooting, electrical, mechanical
 * Description
@@ -200,6 +246,10 @@ The patterns are templated into the following baseline fields:
   * What diagnosis are required for a physical or mental state?
   * Where is monitoring or diagnosis required?
   * When is monitoring or diagnosis performed?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * medical, psychological, warfighter, health, monitoring, diagnosis
 * Description
@@ -216,6 +266,10 @@ The patterns are templated into the following baseline fields:
   * Is there a priority in search?
   * How will text documents be accessed for search?
   * Is there something in the text of consistent interest?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * search, semantic, text, semantic, NLP, SPARQL
 * Description
@@ -231,6 +285,10 @@ The patterns are templated into the following baseline fields:
   * What is being recommended?
   * How is a recommendation assessed?
   * Are there any limitations on inputs?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * recommendation, semantic, artificial intelligence, LLM, GenAI
 * Description
@@ -246,6 +304,10 @@ The patterns are templated into the following baseline fields:
   * What environment is being personalized?
   * How can personalization be performed?
   * Can personalization be automated?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * personalization, semantic, artificial intelligence, LLM, GenAI
 * Description
@@ -261,6 +323,10 @@ The patterns are templated into the following baseline fields:
   * How is the process performed without automation?
   * When is the process performed?
   * What ways is automation possible with portions of the process?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * process, automation, workflow
 * Description
@@ -274,6 +340,10 @@ The patterns are templated into the following baseline fields:
   * What is being assessed?
   * How is the assessment performed?
   * What skills are needed to make and assessment?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * assessment, automation, reasoning, checklists
 * Description
@@ -292,6 +362,10 @@ The patterns are templated into the following baseline fields:
   * When are these systems operational?
   * Where are these systems operational?
   * How is testing or simulation performed?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * robots, automation, vehicles, reasoning, GenAI, sensors, decision-making
 * Description
@@ -308,6 +382,10 @@ The patterns are templated into the following baseline fields:
   * How are symbolic elements trained in this model?
   * Where is the model being consumed by the user?
   * How is the user applying the model?
+* Classes/relationships
+  * 
+* Disambiguation
+  * 
 * Terms
   * neuro-symbolic, reasoning, deep learning, GenAI
 * Description
