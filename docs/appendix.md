@@ -18,3 +18,7 @@ These materials will help the user with applying the operationalizing ontology p
 
 ### Advanced
 
+#### Reasoning
+
+* Tutorial on reasoning
+  * Is there a good one out there that we can point to? 
