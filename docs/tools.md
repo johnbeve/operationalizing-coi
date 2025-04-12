@@ -92,12 +92,6 @@ There are many language standards that support ontology design pattern tasks or 
 
 The tools below are roughly grouped by type (e.g., ontology development environment, knowledge graph, reasoning) but some tools cover multiple functions. Like in many software and AI technology areas, there is a continuous debate about the advantages and disadvantages of open-source software vs. commercial products. In the OWL ecosystem, commercial products are in general ahead of open-source frameworks especially in the category of knowledge graph and reasoning tools. Even the widely accepted and used Protégé is being left behind. The DoD/IC should carefully consider whether or not they should select a designated set of tools or build their own set of tools because commercial products are advancing rapidly. It is probably best to adhere to OWL, RDF, and SPARQL standards and swap in new tools as they become available.
 
-### Catalogs
-
-* Agent Tool (DOD/IC Ontology Foundry and Johns Hopkins Applied Physics Lab)
-    * Agent Tool provides a way to search a curated library of ontologies.
-    * It also provides tools for checking ontologies for compliance to documentation standards and eventually semantic consistency with reasoners.
-
 ### Ontology Development
 
 * **Protégé**: A widely used open-source ontology development environment.[^15][^16]
@@ -107,6 +101,12 @@ The tools below are roughly grouped by type (e.g., ontology development environm
 * **ROBOT**: A Java-based collection of utility functions that can be used to develop and maintain ontologies such as extract, merge, filter, and logical validation. These utilities can be composed into a workflow.[^20] 
 * **RDFLib**: A widely used Python utility package.[^21]
   * RDFLib can be used to ingest a variety of sources (e.g., SQL databases, MongoDB, CSV files, NLP parser output) into RDF for input into knowledge graphs. Among these capabilities, RDFLib can be used to create and modify ontology files in a programmatic way. For examples: with a spreadsheet, generate a new OWL file; with a CSV file of replacement IRIs, update old IRIs to new IRIs; perform a quality control check whether a definition fits the genus-species structure.
+
+### Catalogs
+
+* Agent Tool (DOD/IC Ontology Foundry and Johns Hopkins Applied Physics Lab)
+    * Agent Tool provides a way to search a curated library of ontologies.
+    * It also provides tools for checking ontologies for compliance to documentation standards and eventually semantic consistency with reasoners.
 
 ### Knowledge Graph and Reasoning
 
@@ -140,7 +140,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 
 ### Data Engineering
 
-* **Apake NiFi**: An open-source data flow manager, juggling events and passing them to different services and microservices.[^44] NiFi was built to automate the flow of data between systems. While the term 'dataflow' is used in a variety of contexts, we use it here to mean the automated and managed flow of information between systems. This problem space has been around ever since enterprises had more than one system, where some of the systems created data and some of the systems consumed data. The problems and solution patterns that emerged have been discussed and articulated extensively. A comprehensive and readily consumed form is found in the Enterprise Integration Patterns.
+* **Apache NiFi**: An open-source data flow manager, juggling events and passing them to different services and microservices.[^44] NiFi was built to automate the flow of data between systems. While the term 'dataflow' is used in a variety of contexts, we use it here to mean the automated and managed flow of information between systems. This problem space has been around ever since enterprises had more than one system, where some of the systems created data and some of the systems consumed data. The problems and solution patterns that emerged have been discussed and articulated extensively. A comprehensive and readily consumed form is found in the Enterprise Integration Patterns.
 
 ### Data Architecture
 
@@ -150,6 +150,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 ## References
 
 [Ontology Awesome List](https://github.com/ozekik/awesome-ontology)
+[Semantic Web Awesome List](https://github.com/semantalytics/awesome-semantic-web)
 
 [^1]: [Reasonable Vehicles Rule the Road](https://www.oxfordsemantic.tech/blog/reasonable-vehicles-rule-the-road)
 [^2]: [SWRL Tutorial](https://www.michaeldebellis.com/post/swrl_tutorial)

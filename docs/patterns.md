@@ -52,6 +52,9 @@ The patterns are templated into the following baseline fields:
   * The ontology serves as a lingua franca between heterogeneous sources. The focus is on command centers, backend computing, and cloud-based systems. This is where semantic interoperability challenges for DoD/IC are similar to those found in commercial industry.
   * OWL supports explicit mappings between existing ontologies via equivalentClass and equivalentProperty. This can be used to bridge between 2 domains (e.g., Army and Navy). See these books for a thorough discussion of semantic interoperability and ontology engineering.[^2][^5]
 
+```mermaid
+```
+
 ### Battlefield semantic interoperability
 
 * Competency questions
@@ -73,6 +76,9 @@ The patterns are templated into the following baseline fields:
   * UCI (Universal Command and Control Interface) is an XML schema for battle management. The most recent version has about 600 message types. Fields in messages are defined by informal annotations.
     * _Note:_ We are not aware of any efforts to map UCI to formal ontologies.
 
+```mermaid
+```
+
 ### Knowledge Graph-based datastore
 
 * Competency questions
@@ -92,6 +98,9 @@ The patterns are templated into the following baseline fields:
   * Exploration of social networks
   * Examination of communications networks
 
+```mermaid
+```
+
 ### Data catalogs
 
 * Competency questions
@@ -109,6 +118,9 @@ The patterns are templated into the following baseline fields:
   * Search for sources of relevant structured data across an enterprise for the purpose of data analytics often for management purposes.
 * Use cases
   * DoD Chief Data and AI Office (CDAO) projects
+
+```mermaid
+```
 
 ### Digital assistants and question answering systems
 
@@ -128,6 +140,9 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Siri, Alexa, ChatGPT
   * The ontology provides semantic interoperability between front-end natural language processing of questions and commands and SPARQL queries submitted to backend knowledge graphs.
+
+```mermaid
+```
 
 ### Labeling of machine learning training data
 
@@ -149,6 +164,9 @@ The patterns are templated into the following baseline fields:
   * Video classification
   * Signals classification
 
+```mermaid
+```
+
 ### Deductive reasoning
 
 * Competency questions
@@ -168,6 +186,9 @@ The patterns are templated into the following baseline fields:
   * Common sense (e.g., geospatial and temporal) 
   * Domain-specific (e.g., military doctrine)
 
+```mermaid
+```
+
 ### Robustness checking and monitoring of the results of deep neural network inference
 
 * Competency questions
@@ -186,6 +207,9 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * 
 
+```mermaid
+```
+
 ### Explainable AI
 
 * Competency questions
@@ -202,6 +226,9 @@ The patterns are templated into the following baseline fields:
   * Ontologies can provide the semantic infrastructure to generate logical or natural language explanations of the results of deductive reasoning to build trust for the end-user.
 * Use cases
   * OWL reasoners can generate a trace of the rules and axioms used to answer a SPARQL query. (_JENNIFER urges descriptions of “AI” terms should come from NIST glossary_)
+
+```mermaid
+```
 
 ### Service orchestration
 
@@ -220,6 +247,9 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Resolving task orchestration across multiple 
 
+```mermaid
+```
+
 ### Monitoring and fault diagnosis
 
 * Competency questions
@@ -237,6 +267,9 @@ The patterns are templated into the following baseline fields:
   * Monitoring the operational status of electrical and mechanical equipment and troubleshooting when a failure occurs.
 * Use cases
   * Automated and semi-automated system diagnostics of military platforms
+
+```mermaid
+```
 
 ### Monitoring and medical diagnosis
 
@@ -259,6 +292,9 @@ The patterns are templated into the following baseline fields:
   * Rapidly identify disease vectors within warfighter forces
   * Anticipate treatment geographically or temporally for varying distribution of warfighting forces
 
+```mermaid
+```
+
 ### Semantic search of text documents
 
 * Competency questions
@@ -277,6 +313,9 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Wolfram Alpha search models
   * Enforce better GenAI prompt responses
+
+```mermaid
+```
 
 ### Recommender systems
 
@@ -297,6 +336,9 @@ The patterns are templated into the following baseline fields:
   * A topic specific chat Interface
   * A knowledge graph interpretation layer for user responses
 
+```mermaid
+```
+
 ### Personalization
 
 * Competency questions
@@ -316,6 +358,9 @@ The patterns are templated into the following baseline fields:
   * Learning from user interactions to optimize their working environment.
   * Learning from groups of users to improve system performance.
 
+```mermaid
+```
+
 ### Process automation
 
 * Competency questions
@@ -334,6 +379,9 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Robotic Process Automation systems are moving towards Intelligent Process Automation systems with hopefully more semantics.
 
+```mermaid
+```
+
 ### Assessment automation
 
 * Competency questions
@@ -351,6 +399,9 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Automated testing of technical systems
   * Improving human-in-the-loop assessment tasks
+
+```mermaid
+```
 
 ### Robotics and autonomous vehicles
 
@@ -374,6 +425,9 @@ The patterns are templated into the following baseline fields:
   * Coordination of autonomous sytems with different communication protocols.
   * Multi-Agent, multi-modal autonomous system coordination
 
+```mermaid
+```
+
 ### Neuro-symbolic reasoning
 
 * Competency questions
@@ -392,6 +446,9 @@ The patterns are templated into the following baseline fields:
   * Embed existing knowledge from ontologies and rules into deep neural networks so that basic common knowledge does not have to be learned from large datasets. Applications of this pattern are in the research stage.[^7][^10]
 * Use cases
   * Resolving data dimensionality post-modeling within disparate data systems.
+
+```mermaid
+```
 
 ## References
 
