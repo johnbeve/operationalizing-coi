@@ -49,7 +49,7 @@ Finally, each ontology project will have their unique ecosystem into which valid
 
 ### FOSS Architecture
 
-A baseline for ontology and data engineering can be accomplished with open-source software and minimal specification hardware. For ontology engineers, there are several ontology editor and catalog solutions on there optimized for manipulation and storage of RDF or tabular metadata objects for ontology creation and curation. The ontologies can be stored in any number of open graph databases depending on the preference for triple store, property graph, or other relationship/query paradigms. The data engineers also have a number of traditional or AI-enabled editor for programming pipelines for data and metadata assets, optimizing for repeatable processing and horizontally-scalable task orchestration. File system or object store can be used as a repository for the engineers' assets, enabling change data capture (CDC), version control, and lineage for ontology and data processes. The end user can in turn directly access these assets with appropriate and secure RBAC or preferrably through secure API endpoints.
+A baseline for ontology and data engineering can be accomplished with open-source software and minimal specification hardware. For ontology engineers, there are several ontology editor and catalog solutions out there optimized for manipulation and storage of RDF or tabular metadata objects for ontology creation and curation. The ontologies can be stored in any number of open graph databases depending on the preference for triple store, property graph, or other relationship/query paradigms. The data engineers also have a number of traditional or AI-enabled editor for programming pipelines for data and metadata assets, optimizing for repeatable processing and horizontally-scalable task orchestration. File system or object store can be used as a repository for the engineers' assets, enabling change data capture (CDC), version control, and lineage for ontology and data processes. The end user can in turn directly access these assets with appropriate and secure RBAC or preferrably through secure API endpoints.
 
 ```mermaid
 
@@ -85,7 +85,7 @@ graph LR
 
 ### COTS Architecture
 
-Commercial of the Shelf (COTS) technologies can enable quick and well-supported solutions for ontology engineers seeking to accelerate their efforts while integrating their work with other team efforts.
+Commercial of the Shelf (COTS) technologies can enable quick and well-supported solutions for ontology engineers seeking to accelerate their efforts while integrating their work with other team efforts. A centralized, well-featured tool can enable all key user personas depending on the organization and their requirements. Data engineers may need some additional tooling to enable ontology engineers and end users through the commercial software/hardware, but these could be acquired across a number of local/cloud and open-source/commercial solutions with simple onboarding and vendor support channels.
 
 ```mermaid
 
@@ -114,7 +114,7 @@ graph LR
 
 ### Hybrid Architecture
 
-
+Hybrid architectures are probably the most common solution for ontology engineering and analytic solutions. The combination of COTS and FOSS software will largely depend on the requirements for engineers and the restriction places on organizations' systems and security protocols. However, this is perhaps the most agile method and permits a more diverse path from rapid prototyping to production ready system for end users and other user personas.
 
 ```mermaid
 
