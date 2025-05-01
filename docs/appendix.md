@@ -14,9 +14,19 @@ These materials will help the user with applying the operationalizing ontology p
 
 ### Beginners
 
+* [Building Ontologies with Basic Formal Ontology Book](https://ontology.buffalo.edu/BOBFO/)
+* [BFO 2020 Github Repository](https://github.com/BFO-ontology/BFO-2020)
+* [Barry Smith on YouTube](https://www.youtube.com/@BarrySmithOntology)
+
 ### Intermediate
 
+* [NCOR Applied Ontology Education](https://github.com/Applied-Ontology-Education)
+* [Common Core Ontologies](https://github.com/CommonCoreOntology/CommonCoreOntologies)
+* [John Beverley on YouTube](https://www.youtube.com/@johnbeve)
+
 ### Advanced
+
+* These will be subject specific and may vary broadly from or overlap with Basic and Intermediate topic areas.
 
 #### Reasoning
 
