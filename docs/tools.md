@@ -17,32 +17,32 @@ This document will help DoD/IC software engineers get started in developing appl
 
 ### OWL Deductive Reasoning
 
-Reasoning is used to answer queries and check the logical consistency of ontologies. OWL 2 profiles are designed to accommodate a variety of reasoning capabilities. The choice of the appropriate OWL 2 profile depends on the size of the data and the type of reasoning required for an application. These profiles trade off expressivity in exchange for performance or ability to implement using a particular technology (e.g., business rule engines vs. databases).
+Reasoning is used to answer queries and check the logical consistency of ontologies. OWL 2 has two semantics, which determine how much can be inferred and whether reasoning is guaranteed to finish. It also defines three profiles: restricted subsets of the language that trade off expressivity in exchange for performance or ability to implement using a particular technology (e.g., business rule engines vs. databases).[^owl2-profiles] The choice of the appropriate semantics and profile depends on the size of the data and the type of reasoning required for an application.
 
 > [!NOTE]
 > Note that satisfying a SPARQL query is a kind of inference and so the totality of inference capabilities is what the reasoner can do plus what SPARQL can do. 
 
-There are four OWL 2 profiles:
+The two semantics are:
 
-* **OWL Full**
-* **OWL EL**
-* **OWL RL**
-* **OWL QL**
+* **OWL 2 DL** (Direct Semantics) is the expressive, decidable form of OWL that most ontology tooling targets. Reasoning is guaranteed to terminate, but can be computationally expensive on large or complex ontologies. Reasoners such as HermiT, Pellet, and FaCT++ (including those available as Protégé plugins) implement OWL 2 DL.
+* **OWL 2 Full** (RDF-Based Semantics) accepts any RDF graph with no syntactic restrictions. Reasoning is undecidable (it might run forever in some cases), so no reasoner implements all of OWL 2 Full. In practice, tools implement a subset of it, such as the OWL 2 RL rules.
 
-OWL Full is the most expressive profile. However, OWL Full reasoning might run forever in some cases (it is undecidable). EL, RL, and QL leave out specific OWL expressions that impact reasoning performance and decidability.
+The three OWL 2 profiles are syntactic subsets of OWL 2 DL. Each leaves out specific OWL expressions that impact reasoning performance:
+
+| Profile | Designed for | Typical use | Example implementations |
+| --- | --- | --- | --- |
+| **OWL 2 EL** | Fast (polynomial time) classification of ontologies with very large numbers of classes and properties | Building and checking large terminologies (e.g., SNOMED CT) | ELK |
+| **OWL 2 QL** | Query answering over large amounts of instance data by rewriting queries into SQL over relational databases | Virtual knowledge graphs over existing databases (see R2RML below) | Ontop |
+| **OWL 2 RL** | Reasoning that can be implemented with rules operating directly on RDF triples (polynomial time) | Materializing inferences in triple stores; a good default for many data-heavy applications | RDFox, GraphDB |
 
 For example, queries that involve `sameAs` expressions on individuals are notoriously computationally intensive.
 
-* OWL EL is less expressive and suitable for fast reasoning on ontologies that obey its restrictions. EL is useful for checking/validating complex ontologies but is not as useful for querying with instance data.
-* OWL RL is designed to be implementable using rule systems and is quite powerful. OWL RL is a good default profile for many applications.
-* OWL QL is designed to be implemented in SQL and is useful for querying with large amounts of data.
-
-It is not uncommon to reason using OWL Full on the ontology, augmenting the ontology with those inferences before loading the combination into a triple store, and then using a less powerful profile to deploy for querying instance data.
+It is not uncommon to run a full OWL 2 DL reasoner over the ontology itself (e.g., to compute the inferred class hierarchy), augment the ontology with those inferences before loading the combination into a triple store, and then use a less powerful profile such as OWL 2 RL to reason over instance data at query time.
 
 To select an appropriate profile, you can develop a set of “competency questions” that determine the kinds of inference that a specific application needs. Then map those competency questions to OWL expressions in profiles to select the appropriate profile.
 
 > [!NOTE]
-> The next version of this document will include a more complete explanation on checking the logical consistency of ontologies and advice on the specific reasoners that are available such as Pellet, Hermit, and ELK.
+> The next version of this document will include a more complete explanation on checking the logical consistency of ontologies and advice on choosing between the available reasoners.
 
 ### Rules
 
@@ -152,6 +152,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 [Ontology Awesome List](https://github.com/ozekik/awesome-ontology)
 [Semantic Web Awesome List](https://github.com/semantalytics/awesome-semantic-web)
 
+[^owl2-profiles]: [OWL 2 Web Ontology Language Profiles](https://www.w3.org/TR/owl2-profiles/)
 [^1]: [Reasonable Vehicles Rule the Road](https://www.oxfordsemantic.tech/blog/reasonable-vehicles-rule-the-road)
 [^2]: [SWRL Tutorial](https://www.michaeldebellis.com/post/swrl_tutorial)
 [^3]: [OWLReady2 Rules](https://owlready2.readthedocs.io/en/v0.37/rule.html)
