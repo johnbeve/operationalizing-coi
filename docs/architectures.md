@@ -11,7 +11,7 @@ The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to
 This document provides guidance on data architectures and their assemblage based on the ontology application. This guidance will not cover every possible scenario, but provides a sufficient baseline for conceptualization and implementation of these architectures.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL2, RDF, and SPARQL for most situations encountered by this CoI (see Guidance for Ontology-based Systems Development).
+> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL2, RDF, and SPARQL for most situations encountered by this CoI (see _Guidance for Ontology-based Systems Development_, DoD/IC Ontology Foundry; not publicly available).
 
 ## Key Architecture Considerations
 

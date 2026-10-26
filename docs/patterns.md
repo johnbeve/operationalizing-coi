@@ -11,7 +11,7 @@ The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to
 This document contains a list of common domain-independent ontology application patterns and associated appropriate architectures. We are using the term “application pattern” instead of “use case” because use case often refers to aspects of applications related to domain-specific ontologies (e.g., air defense, aircraft maintenance, etc.). Most of the patterns listed below are fairly general and not focused on specific missions or equipment.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see Guidance for Ontology-based Systems Development). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
+> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoD/IC Ontology Foundry; not publicly available). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
 
 ## Application Patterns
 
@@ -111,7 +111,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Description
   * Search for sources of relevant structured data across an enterprise for the purpose of data analytics often for management purposes.
 * Use cases
-  * DoD Chief Data and AI Office (CDAO) projects
+  * DoD Chief Digital and Artificial Intelligence Office (CDAO) projects
 
 ### Digital assistants and question answering systems
 
@@ -204,7 +204,8 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Description
   * Ontologies can provide the semantic infrastructure to generate logical or natural language explanations of the results of deductive reasoning to build trust for the end-user.
 * Use cases
-  * OWL reasoners can generate a trace of the rules and axioms used to answer a SPARQL query. (_JENNIFER urges descriptions of “AI” terms should come from NIST glossary_)
+  * OWL reasoners can generate a trace of the rules and axioms used to answer a SPARQL query.
+    * _Note:_ Descriptions of AI terms in this pattern should align with NIST definitions.[^nist-ai-rmf]
 
 ### Service orchestration
 
@@ -221,7 +222,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Description
   * Web services or microservices can be automatically composed and aggregated into a pipeline to achieve a task. Semantic Web Services were developed by the OWL research community but never fully standardized. An ontology is used to describe various aspects of a service to support search and composition. Various techniques such as AI planners or genetic algorithms can support reasoning for service composition.
 * Use cases
-  * Resolving task orchestration across multiple 
+  * Resolving task orchestration across multiple services or systems.
 
 ### Monitoring and fault diagnosis
 
@@ -407,6 +408,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 [^7]: Kautz 2021 “The Third AI Summer”  https://henrykautz.com/talks/index.html 
 [^8]: Marcus, G., & Davis, E. (2019). Rebooting AI: Building Artificial Intelligence We Can Trust. Pantheon.
 [^9]: Marcus, G. (2020). The next decade in AI: four steps towards robust artificial intelligence. arXiv preprint arXiv:2002.06177.
+[^nist-ai-rmf]: National Institute of Standards and Technology. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0) (NIST AI 100-1). https://doi.org/10.6028/NIST.AI.100-1
 [^10]: Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302.
 [^11]: Sap, M., Le Bras, R., Allaway, E., Bhagavatula, C., Lourie, N., Rashkin, H., ... & Choi, Y. (2019, July). Atomic: An atlas of machine commonsense for if-then reasoning. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 33, pp. 3027-3035).
 [^12]: Speer, R., Chin, J., & Havasi, C. (2017, February). Conceptnet 5.5: An open multilingual graph of general knowledge. In Thirty-First AAAI Conference on Artificial Intelligence.

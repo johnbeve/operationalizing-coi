@@ -2,8 +2,6 @@
 
 ## Terminology
 
-Acronyms and terms used across the Patterns, Architectures, and Tools documents.
-
 | Term | Meaning |
 | --- | --- |
 | API | Application Programming Interface. A defined way for software components to communicate. |

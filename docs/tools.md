@@ -11,7 +11,7 @@ The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to
 This document will help DoD/IC software engineers get started in developing applications that leverage ontologies. See the Patterns document for help in identifying opportunities to insert ontologies into current and future systems.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see Guidance for Ontology-based Systems Development).
+> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoD/IC Ontology Foundry; not publicly available).
 
 ## Essential Tool Concepts
 
@@ -120,7 +120,6 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 * **Apache Jena**: An open-source Java framework for building semantic web applications.[^30] Jena includes a query engine for SPARQL called ARQ.
 * **Amazon Neptune**: Supports both RDF and LPGs.[^31]
 * **Ontotext GraphDB**[^32]
-* **(ALI)**
 * **Franz AllegroGraph**[^33]
 * **PoolParty**[^34]
 * **Neo4j**: The most widely used LPG tool.[^35] It can import RDF and some main OWL constructs.[^36]
