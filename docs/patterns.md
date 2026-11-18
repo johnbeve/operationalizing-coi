@@ -111,7 +111,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Description
   * Search for sources of relevant structured data across an enterprise for the purpose of data analytics often for management purposes.
 * Use cases
-  * DoW Chief Digital and Artificial Intelligence Office (CDAO) projects
+  * DoW Super Intelligence Office (SIO) projects
 
 ### Digital assistants and question answering systems
 

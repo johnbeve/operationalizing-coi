@@ -8,7 +8,7 @@
 | BFO | Basic Formal Ontology. A top-level ontology (standardized as ISO/IEC 21838-2) that provides the most general categories, such as object, process, and quality. |
 | C2 | Command and Control. |
 | CCO | Common Core Ontologies. A suite of mid-level ontologies that extend BFO with terms common across many domains (e.g., agents, artifacts, information, events). |
-| CDAO | DoW Chief Digital and Artificial Intelligence Office. |
+| SIO | DoW Super Intelligence Office. |
 | CL | Common Logic. An ISO standard (ISO/IEC 24707) family of first-order logic languages for exchanging knowledge. |
 | Competency question | A question that an ontology or ontology-based system must be able to answer. Used to scope, design, and validate the ontology. |
 | COTS / GOTS | Commercial off-the-shelf / Government off-the-shelf software. |
