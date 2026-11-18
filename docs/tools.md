@@ -1,48 +1,48 @@
 # Tools
 
-## DoD/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
+## DoW/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
 
 **Contributors:** Paul Kogut, Don Pellegrino, Jonathan Vajda, John Beverley, Joe Blankenship, Eric Peterson, Tim Toohill, Jennifer DeCamp, Ali Hasanzedah, John Judkins, Amanda Mitchell
 
 ## Introduction
 
-The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoD/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoD/IC personnel identify opportunities to insert ontologies into current and future systems.
+The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoW/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoW/IC personnel identify opportunities to insert ontologies into current and future systems.
 
-This document will help DoD/IC software engineers get started in developing applications that leverage ontologies. See the Patterns document for help in identifying opportunities to insert ontologies into current and future systems.
+This document will help DoW/IC software engineers get started in developing applications that leverage ontologies. See the Patterns document for help in identifying opportunities to insert ontologies into current and future systems.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see Guidance for Ontology-based Systems Development).
+> This document assumes use of DoW/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoW/IC Ontology Foundry; not publicly available).
 
 ## Essential Tool Concepts
 
 ### OWL Deductive Reasoning
 
-Reasoning is used to answer queries and check the logical consistency of ontologies. OWL 2 profiles are designed to accommodate a variety of reasoning capabilities. The choice of the appropriate OWL 2 profile depends on the size of the data and the type of reasoning required for an application. These profiles trade off expressivity in exchange for performance or ability to implement using a particular technology (e.g., business rule engines vs. databases).
+Reasoning is used to answer queries and check the logical consistency of ontologies. OWL 2 has two semantics, which determine how much can be inferred and whether reasoning is guaranteed to finish. It also defines three profiles: restricted subsets of the language that trade off expressivity in exchange for performance or ability to implement using a particular technology (e.g., business rule engines vs. databases).[^owl2-profiles] The choice of the appropriate semantics and profile depends on the size of the data and the type of reasoning required for an application.
 
 > [!NOTE]
 > Note that satisfying a SPARQL query is a kind of inference and so the totality of inference capabilities is what the reasoner can do plus what SPARQL can do. 
 
-There are four OWL 2 profiles:
+The two semantics are:
 
-* **OWL Full**
-* **OWL EL**
-* **OWL RL**
-* **OWL QL**
+* **OWL 2 DL** (Direct Semantics) is the expressive, decidable form of OWL that most ontology tooling targets. Reasoning is guaranteed to terminate, but can be computationally expensive on large or complex ontologies. Reasoners such as HermiT, Pellet, and FaCT++ (including those available as Protégé plugins) implement OWL 2 DL.
+* **OWL 2 Full** (RDF-Based Semantics) accepts any RDF graph with no syntactic restrictions. Reasoning is undecidable (it might run forever in some cases), so no reasoner implements all of OWL 2 Full. In practice, tools implement a subset of it, such as the OWL 2 RL rules.
 
-OWL Full is the most expressive profile. However, OWL Full reasoning might run forever in some cases (it is undecidable). EL, RL, and QL leave out specific OWL expressions that impact reasoning performance and decidability.
+The three OWL 2 profiles are syntactic subsets of OWL 2 DL. Each leaves out specific OWL expressions that impact reasoning performance:
+
+| Profile | Designed for | Typical use | Example implementations |
+| --- | --- | --- | --- |
+| **OWL 2 EL** | Fast (polynomial time) classification of ontologies with very large numbers of classes and properties | Building and checking large terminologies (e.g., SNOMED CT) | ELK |
+| **OWL 2 QL** | Query answering over large amounts of instance data by rewriting queries into SQL over relational databases | Virtual knowledge graphs over existing databases (see R2RML below) | Ontop |
+| **OWL 2 RL** | Reasoning that can be implemented with rules operating directly on RDF triples (polynomial time) | Materializing inferences in triple stores; a good default for many data-heavy applications | RDFox, GraphDB |
 
 For example, queries that involve `sameAs` expressions on individuals are notoriously computationally intensive.
 
-* OWL EL is less expressive and suitable for fast reasoning on ontologies that obey its restrictions. EL is useful for checking/validating complex ontologies but is not as useful for querying with instance data.
-* OWL RL is designed to be implementable using rule systems and is quite powerful. OWL RL is a good default profile for many applications.
-* OWL QL is designed to be implemented in SQL and is useful for querying with large amounts of data.
-
-It is not uncommon to reason using OWL Full on the ontology, augmenting the ontology with those inferences before loading the combination into a triple store, and then using a less powerful profile to deploy for querying instance data.
+It is not uncommon to run a full OWL 2 DL reasoner over the ontology itself (e.g., to compute the inferred class hierarchy), augment the ontology with those inferences before loading the combination into a triple store, and then use a less powerful profile such as OWL 2 RL to reason over instance data at query time.
 
 To select an appropriate profile, you can develop a set of “competency questions” that determine the kinds of inference that a specific application needs. Then map those competency questions to OWL expressions in profiles to select the appropriate profile.
 
 > [!NOTE]
-> The next version of this document will include a more complete explanation on checking the logical consistency of ontologies and advice on the specific reasoners that are available such as Pellet, Hermit, and ELK.
+> The next version of this document will include a more complete explanation on checking the logical consistency of ontologies and advice on choosing between the available reasoners.
 
 ### Rules
 
@@ -70,7 +70,7 @@ Natural Language Processing (NLP) is the handling of human language artifacts by
 
 The parsing of unstructured data including natural language documents and human-to-human or human-to-machine conversations into RDF which is semantically linked to ontologies is a major advantage of the OWL ecosystem. Processing natural language with high precision and recall is challenging.
 
-A variety of NLP tools exist. All require significant machine learning training or knowledge engineering for most specialized DoD/IC domains. Large language models, such as ChatGPT, are NLP tools that generate new text artifacts based on next work prediction from a large foundation model of curated reference corporas.
+A variety of NLP tools exist. All require significant machine learning training or knowledge engineering for most specialized DoW/IC domains. Large language models, such as ChatGPT, are NLP tools that generate new text artifacts based on next work prediction from a large foundation model of curated reference corporas.
 
 ### Relational Database to RDF Mapping Language
 
@@ -90,7 +90,7 @@ There are many language standards that support ontology design pattern tasks or 
 
 ## List of Tools and Frameworks
 
-The tools below are roughly grouped by type (e.g., ontology development environment, knowledge graph, reasoning) but some tools cover multiple functions. Like in many software and AI technology areas, there is a continuous debate about the advantages and disadvantages of open-source software vs. commercial products. In the OWL ecosystem, commercial products are in general ahead of open-source frameworks especially in the category of knowledge graph and reasoning tools. Even the widely accepted and used Protégé is being left behind. The DoD/IC should carefully consider whether or not they should select a designated set of tools or build their own set of tools because commercial products are advancing rapidly. It is probably best to adhere to OWL, RDF, and SPARQL standards and swap in new tools as they become available.
+The tools below are roughly grouped by type (e.g., ontology development environment, knowledge graph, reasoning) but some tools cover multiple functions. Like in many software and AI technology areas, there is a continuous debate about the advantages and disadvantages of open-source software vs. commercial products. In the OWL ecosystem, commercial products are in general ahead of open-source frameworks especially in the category of knowledge graph and reasoning tools. Even the widely accepted and used Protégé is being left behind. The DoW/IC should carefully consider whether or not they should select a designated set of tools or build their own set of tools because commercial products are advancing rapidly. It is probably best to adhere to OWL, RDF, and SPARQL standards and swap in new tools as they become available.
 
 ### Ontology Development
 
@@ -104,7 +104,7 @@ The tools below are roughly grouped by type (e.g., ontology development environm
 
 ### Catalogs
 
-* Agent Tool (DOD/IC Ontology Foundry and Johns Hopkins Applied Physics Lab)
+* Agent Tool (DoW/IC Ontology Foundry and Johns Hopkins Applied Physics Lab)
     * Agent Tool provides a way to search a curated library of ontologies.
     * It also provides tools for checking ontologies for compliance to documentation standards and eventually semantic consistency with reasoners.
 
@@ -120,7 +120,6 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 * **Apache Jena**: An open-source Java framework for building semantic web applications.[^30] Jena includes a query engine for SPARQL called ARQ.
 * **Amazon Neptune**: Supports both RDF and LPGs.[^31]
 * **Ontotext GraphDB**[^32]
-* **(ALI)**
 * **Franz AllegroGraph**[^33]
 * **PoolParty**[^34]
 * **Neo4j**: The most widely used LPG tool.[^35] It can import RDF and some main OWL constructs.[^36]
@@ -131,7 +130,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 
 * **spaCy and Prodigy**: Prodigy is used to label training data and spaCy learns to parse sentences based on that training data. These are widely used tools.[^39]
 * **Lymba**: A commercial tool that uses hybrid machine learning and semantic knowledge. Lymba Jaguar uses NLP to extract candidate terms for ontologies.[^40]
-* **Gamechanger**: Developed by DoD and has been tailored for some DoD domains. It currently does not output RDF/OWL.[^41]
+* **Gamechanger**: Developed by DoW and has been tailored for some DoW domains. It currently does not output RDF/OWL.[^41]
 
 ### Text Editors
 
@@ -152,6 +151,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 [Ontology Awesome List](https://github.com/ozekik/awesome-ontology)
 [Semantic Web Awesome List](https://github.com/semantalytics/awesome-semantic-web)
 
+[^owl2-profiles]: [OWL 2 Web Ontology Language Profiles](https://www.w3.org/TR/owl2-profiles/)
 [^1]: [Reasonable Vehicles Rule the Road](https://www.oxfordsemantic.tech/blog/reasonable-vehicles-rule-the-road)
 [^2]: [SWRL Tutorial](https://www.michaeldebellis.com/post/swrl_tutorial)
 [^3]: [OWLReady2 Rules](https://owlready2.readthedocs.io/en/v0.37/rule.html)
@@ -192,7 +192,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 [^38]: [TigerGraph](https://www.tigergraph.com/)
 [^39]: [spaCy](https://spacy.io/) and [Prodigy](https://prodi.gy/)
 [^40]: [Lymba](https://www.lymba.com/)
-[^41]: [Gamechanger](https://github.com/dod-advana/gamechanger)
+[^41]: [Gamechanger](https://github.com/DoW-advana/gamechanger)
 [^42]: [VS Code](https://code.visualstudio.com/)
 [^43]: [Notepad++](https://notepad-plus-plus.org/)
 [^44]: [NiFi](https://nifi.apache.org/)

@@ -1,17 +1,17 @@
 # Patterns
 
-## DoD/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
+## DoW/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
 
 **Contributors:** Paul Kogut, Don Pellegrino, Jonathan Vajda, John Beverley, Joe Blankenship, Eric Peterson, Tim Toohill, Jennifer DeCamp, Ali Hasanzedah, John Judkins, Amanda Mitchell
 
 ## Introduction
 
-The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoD/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoD/IC personnel identify opportunities to insert ontologies into current and future systems.
+The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoW/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoW/IC personnel identify opportunities to insert ontologies into current and future systems.
 
 This document contains a list of common domain-independent ontology application patterns and associated appropriate architectures. We are using the term “application pattern” instead of “use case” because use case often refers to aspects of applications related to domain-specific ontologies (e.g., air defense, aircraft maintenance, etc.). Most of the patterns listed below are fairly general and not focused on specific missions or equipment.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see Guidance for Ontology-based Systems Development). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
+> This document assumes use of DoW/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoW/IC Ontology Foundry; not publicly available). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
 
 ## Application Patterns
 
@@ -34,6 +34,9 @@ The patterns are templated into the following baseline fields:
 * key terms associated with the pattern using common terms used by subject matter experts.
 * descriptions of the pattern in simple, approachable, translatable language (e.g., technical language that avoids jargon).
 * use cases in which the pattern has or can be applied including relevant rules.
+* (optional) a [Mermaid](https://mermaid.js.org/) diagram showing how the pattern's main components or concepts relate, placed after the use cases.
+
+Fields marked _Help wanted_ have not been drafted yet. To contribute, find the matching issue for that pattern (or open one), comment to claim it, and submit a PR that replaces the marker with your content.
 
 ### Data Fabric
 
@@ -41,19 +44,16 @@ The patterns are templated into the following baseline fields:
   * How is data connected?
   * What systems allow connection of data assets?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * data, metadata, cloud compute
 * Description
   * Semantic interoperability to integrate heterogeneous data for conventional enterprise systems, AI applications, and data analytics applications (aka a data fabric).
 * Use cases
-  * The ontology serves as a lingua franca between heterogeneous sources. The focus is on command centers, backend computing, and cloud-based systems. This is where semantic interoperability challenges for DoD/IC are similar to those found in commercial industry.
+  * The ontology serves as a lingua franca between heterogeneous sources. The focus is on command centers, backend computing, and cloud-based systems. This is where semantic interoperability challenges for DoW/IC are similar to those found in commercial industry.
   * OWL supports explicit mappings between existing ontologies via equivalentClass and equivalentProperty. This can be used to bridge between 2 domains (e.g., Army and Navy). See these books for a thorough discussion of semantic interoperability and ontology engineering.[^2][^5]
-
-```mermaid
-```
 
 ### Battlefield semantic interoperability
 
@@ -63,9 +63,9 @@ The patterns are templated into the following baseline fields:
   * Who is operating the communication systems?
   * Where are the communication systems located?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * battlefield, communications, interoperability
 * Description
@@ -76,9 +76,6 @@ The patterns are templated into the following baseline fields:
   * UCI (Universal Command and Control Interface) is an XML schema for battle management. The most recent version has about 600 message types. Fields in messages are defined by informal annotations.
     * _Note:_ We are not aware of any efforts to map UCI to formal ontologies.
 
-```mermaid
-```
-
 ### Knowledge Graph-based datastore
 
 * Competency questions
@@ -87,9 +84,9 @@ The patterns are templated into the following baseline fields:
   * Is the the query type a traversal?
   * Is connection between entities the primary goal of analysis?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * knowledge graph, relationships, dyad, triple, property, RDF
 * Description
@@ -97,9 +94,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Exploration of social networks
   * Examination of communications networks
-
-```mermaid
-```
 
 ### Data catalogs
 
@@ -109,18 +103,15 @@ The patterns are templated into the following baseline fields:
   * Who has access to what data assets?
   * When was the data loaded, accessed, or depricated?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * data, catalog, metadata, security, user, mart
 * Description
   * Search for sources of relevant structured data across an enterprise for the purpose of data analytics often for management purposes.
 * Use cases
-  * DoD Chief Data and AI Office (CDAO) projects
-
-```mermaid
-```
+  * DoW Super Intelligence Office (SIO) projects
 
 ### Digital assistants and question answering systems
 
@@ -130,19 +121,16 @@ The patterns are templated into the following baseline fields:
   * What skills are needed to answer questions?
   * What constraints do you have on questions?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * answering system, digital assistant, agent, LLM
 * Description
-  * Recently, systems based on Large Language Models (LLM) such as ChatGPT have exploded in popularity.[^6] They can be used for general question answering and generation of natural language text paragraphs and reports. However, they often generate wrong answers (hallucinate) and are difficult to train to answer domain-specific questions relevant to DoD/IC. However, ontologies and LLMs are complementary technologies.[^10] Hybrid question-answering systems may solve some of the problems with hallucination and lack of DoD/IC domain knowledge.
+  * Recently, systems based on Large Language Models (LLM) such as ChatGPT have exploded in popularity.[^6] They can be used for general question answering and generation of natural language text paragraphs and reports. However, they often generate wrong answers (hallucinate) and are difficult to train to answer domain-specific questions relevant to DoW/IC. However, ontologies and LLMs are complementary technologies.[^10] Hybrid question-answering systems may solve some of the problems with hallucination and lack of DoW/IC domain knowledge.
 * Use cases
   * Siri, Alexa, ChatGPT
   * The ontology provides semantic interoperability between front-end natural language processing of questions and commands and SPARQL queries submitted to backend knowledge graphs.
-
-```mermaid
-```
 
 ### Labeling of machine learning training data
 
@@ -152,9 +140,9 @@ The patterns are templated into the following baseline fields:
   * Where is the training data located?
   * How is the data being modeled?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * training data, machine learning, deep learning, classification
 * Description
@@ -164,9 +152,6 @@ The patterns are templated into the following baseline fields:
   * Video classification
   * Signals classification
 
-```mermaid
-```
-
 ### Deductive reasoning
 
 * Competency questions
@@ -175,9 +160,9 @@ The patterns are templated into the following baseline fields:
   * Who is involved in the reasoning process?
   * How is reasoning being performed?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * reasoning, deduction, inference, decision-making, data, logic
 * Description
@@ -185,9 +170,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Common sense (e.g., geospatial and temporal) 
   * Domain-specific (e.g., military doctrine)
-
-```mermaid
-```
 
 ### Robustness checking and monitoring of the results of deep neural network inference
 
@@ -197,18 +179,15 @@ The patterns are templated into the following baseline fields:
   * What are the constraints of the neural network?
   * What is being monitored?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * neural network, data, monitoring, testing
 * Description
   * Use of ontology to enhance results of automatic target recognition on novel objects and occluded images as they may be wrong because they are not similar to data in the machine learning training data set.
 * Use cases
-  * 
-
-```mermaid
-```
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 
 ### Explainable AI
 
@@ -217,18 +196,16 @@ The patterns are templated into the following baseline fields:
   * How is explaination affecting the AI?
   * What will explaination of the AI do?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * artificial intelligence, oversight, algorithms
 * Description
   * Ontologies can provide the semantic infrastructure to generate logical or natural language explanations of the results of deductive reasoning to build trust for the end-user.
 * Use cases
-  * OWL reasoners can generate a trace of the rules and axioms used to answer a SPARQL query. (_JENNIFER urges descriptions of “AI” terms should come from NIST glossary_)
-
-```mermaid
-```
+  * OWL reasoners can generate a trace of the rules and axioms used to answer a SPARQL query.
+    * _Note:_ Descriptions of AI terms in this pattern should align with NIST definitions.[^nist-ai-rmf]
 
 ### Service orchestration
 
@@ -237,18 +214,15 @@ The patterns are templated into the following baseline fields:
   * What things will be orchestrated?
   * Where will this orchestration occur?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * services, pipelines, API, architecture, information technology
 * Description
   * Web services or microservices can be automatically composed and aggregated into a pipeline to achieve a task. Semantic Web Services were developed by the OWL research community but never fully standardized. An ontology is used to describe various aspects of a service to support search and composition. Various techniques such as AI planners or genetic algorithms can support reasoning for service composition.
 * Use cases
-  * Resolving task orchestration across multiple 
-
-```mermaid
-```
+  * Resolving task orchestration across multiple services or systems.
 
 ### Monitoring and fault diagnosis
 
@@ -258,18 +232,15 @@ The patterns are templated into the following baseline fields:
   * How are faults identified?
   * How is monitoring performed?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * monitoring, faults, errors, diagnosis, troubleshooting, electrical, mechanical
 * Description
   * Monitoring the operational status of electrical and mechanical equipment and troubleshooting when a failure occurs.
 * Use cases
   * Automated and semi-automated system diagnostics of military platforms
-
-```mermaid
-```
 
 ### Monitoring and medical diagnosis
 
@@ -280,9 +251,9 @@ The patterns are templated into the following baseline fields:
   * Where is monitoring or diagnosis required?
   * When is monitoring or diagnosis performed?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * medical, psychological, warfighter, health, monitoring, diagnosis
 * Description
@@ -292,9 +263,6 @@ The patterns are templated into the following baseline fields:
   * Rapidly identify disease vectors within warfighter forces
   * Anticipate treatment geographically or temporally for varying distribution of warfighting forces
 
-```mermaid
-```
-
 ### Semantic search of text documents
 
 * Competency questions
@@ -303,9 +271,9 @@ The patterns are templated into the following baseline fields:
   * How will text documents be accessed for search?
   * Is there something in the text of consistent interest?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * search, semantic, text, semantic, NLP, SPARQL
 * Description
@@ -313,9 +281,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Wolfram Alpha search models
   * Enforce better GenAI prompt responses
-
-```mermaid
-```
 
 ### Recommender systems
 
@@ -325,9 +290,9 @@ The patterns are templated into the following baseline fields:
   * How is a recommendation assessed?
   * Are there any limitations on inputs?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * recommendation, semantic, artificial intelligence, LLM, GenAI
 * Description
@@ -335,9 +300,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * A topic specific chat Interface
   * A knowledge graph interpretation layer for user responses
-
-```mermaid
-```
 
 ### Personalization
 
@@ -347,9 +309,9 @@ The patterns are templated into the following baseline fields:
   * How can personalization be performed?
   * Can personalization be automated?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * personalization, semantic, artificial intelligence, LLM, GenAI
 * Description
@@ -357,9 +319,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Learning from user interactions to optimize their working environment.
   * Learning from groups of users to improve system performance.
-
-```mermaid
-```
 
 ### Process automation
 
@@ -369,18 +328,15 @@ The patterns are templated into the following baseline fields:
   * When is the process performed?
   * What ways is automation possible with portions of the process?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * process, automation, workflow
 * Description
   * Applications intended to reduce manpower and increase accuracy of results ranging from totally autonomous task performance to human-in-the-loop workflow assistants. 
 * Use cases
   * Robotic Process Automation systems are moving towards Intelligent Process Automation systems with hopefully more semantics.
-
-```mermaid
-```
 
 ### Assessment automation
 
@@ -389,9 +345,9 @@ The patterns are templated into the following baseline fields:
   * How is the assessment performed?
   * What skills are needed to make and assessment?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * assessment, automation, reasoning, checklists
 * Description
@@ -399,9 +355,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Automated testing of technical systems
   * Improving human-in-the-loop assessment tasks
-
-```mermaid
-```
 
 ### Robotics and autonomous vehicles
 
@@ -414,9 +367,9 @@ The patterns are templated into the following baseline fields:
   * Where are these systems operational?
   * How is testing or simulation performed?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * robots, automation, vehicles, reasoning, GenAI, sensors, decision-making
 * Description
@@ -424,9 +377,6 @@ The patterns are templated into the following baseline fields:
 * Use cases
   * Coordination of autonomous sytems with different communication protocols.
   * Multi-Agent, multi-modal autonomous system coordination
-
-```mermaid
-```
 
 ### Neuro-symbolic reasoning
 
@@ -437,18 +387,15 @@ The patterns are templated into the following baseline fields:
   * Where is the model being consumed by the user?
   * How is the user applying the model?
 * Classes/relationships
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Disambiguation
-  * 
+  * _Help wanted: not yet drafted. See the Template section above to contribute._
 * Terms
   * neuro-symbolic, reasoning, deep learning, GenAI
 * Description
   * Embed existing knowledge from ontologies and rules into deep neural networks so that basic common knowledge does not have to be learned from large datasets. Applications of this pattern are in the research stage.[^7][^10]
 * Use cases
   * Resolving data dimensionality post-modeling within disparate data systems.
-
-```mermaid
-```
 
 ## References
 
@@ -461,6 +408,7 @@ The patterns are templated into the following baseline fields:
 [^7]: Kautz 2021 “The Third AI Summer”  https://henrykautz.com/talks/index.html 
 [^8]: Marcus, G., & Davis, E. (2019). Rebooting AI: Building Artificial Intelligence We Can Trust. Pantheon.
 [^9]: Marcus, G. (2020). The next decade in AI: four steps towards robust artificial intelligence. arXiv preprint arXiv:2002.06177.
+[^nist-ai-rmf]: National Institute of Standards and Technology. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0) (NIST AI 100-1). https://doi.org/10.6028/NIST.AI.100-1
 [^10]: Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302.
 [^11]: Sap, M., Le Bras, R., Allaway, E., Bhagavatula, C., Lourie, N., Rashkin, H., ... & Choi, Y. (2019, July). Atomic: An atlas of machine commonsense for if-then reasoning. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 33, pp. 3027-3035).
 [^12]: Speer, R., Chin, J., & Havasi, C. (2017, February). Conceptnet 5.5: An open multilingual graph of general knowledge. In Thirty-First AAAI Conference on Artificial Intelligence.
