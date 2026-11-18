@@ -1,17 +1,17 @@
 # Architectures
 
-## DoD/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
+## DoW/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
 
 **Contributors:** Paul Kogut, Don Pellegrino, Jonathan Vajda, John Beverley, Joe Blankenship, Eric Peterson, Tim Toohill, Jennifer DeCamp, Ali Hasanzedah, John Judkins, Amanda Mitchell
 
 ## Introduction
 
-The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoD/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoD/IC personnel identify opportunities to insert ontologies into current and future systems.
+The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoW/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoW/IC personnel identify opportunities to insert ontologies into current and future systems.
 
 This document provides guidance on data architectures and their assemblage based on the ontology application. This guidance will not cover every possible scenario, but provides a sufficient baseline for conceptualization and implementation of these architectures.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL2, RDF, and SPARQL for most situations encountered by this CoI (see _Guidance for Ontology-based Systems Development_, DoD/IC Ontology Foundry; not publicly available).
+> This document assumes use of DoW/IC Foundry-compliant semantic infrastructure that includes OWL2, RDF, and SPARQL for most situations encountered by this CoI (see _Guidance for Ontology-based Systems Development_, DoW/IC Ontology Foundry; not publicly available).
 
 ## Key Architecture Considerations
 

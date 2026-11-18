@@ -17,7 +17,7 @@ By submitting a contribution, you agree that it will be licensed under the same 
 
 The contents of this repository are intended for public release. Do not submit Controlled Unclassified Information (CUI), classified information, or any other material that is not cleared for public release.
 
-The views expressed here are those of the individual contributors and do not represent official policy or positions of the Department of Defense, the Intelligence Community, or any other U.S. Government agency. Mention of specific products or vendors does not constitute endorsement.
+The views expressed here are those of the individual contributors and do not represent official policy or positions of the Department of War, the Intelligence Community, or any other U.S. Government agency. Mention of specific products or vendors does not constitute endorsement.
 
 ## License
 

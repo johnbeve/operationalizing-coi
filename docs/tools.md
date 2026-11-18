@@ -1,17 +1,17 @@
 # Tools
 
-## DoD/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
+## DoW/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
 
 **Contributors:** Paul Kogut, Don Pellegrino, Jonathan Vajda, John Beverley, Joe Blankenship, Eric Peterson, Tim Toohill, Jennifer DeCamp, Ali Hasanzedah, John Judkins, Amanda Mitchell
 
 ## Introduction
 
-The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoD/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoD/IC personnel identify opportunities to insert ontologies into current and future systems.
+The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoW/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoW/IC personnel identify opportunities to insert ontologies into current and future systems.
 
-This document will help DoD/IC software engineers get started in developing applications that leverage ontologies. See the Patterns document for help in identifying opportunities to insert ontologies into current and future systems.
+This document will help DoW/IC software engineers get started in developing applications that leverage ontologies. See the Patterns document for help in identifying opportunities to insert ontologies into current and future systems.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoD/IC Ontology Foundry; not publicly available).
+> This document assumes use of DoW/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoW/IC Ontology Foundry; not publicly available).
 
 ## Essential Tool Concepts
 
@@ -70,7 +70,7 @@ Natural Language Processing (NLP) is the handling of human language artifacts by
 
 The parsing of unstructured data including natural language documents and human-to-human or human-to-machine conversations into RDF which is semantically linked to ontologies is a major advantage of the OWL ecosystem. Processing natural language with high precision and recall is challenging.
 
-A variety of NLP tools exist. All require significant machine learning training or knowledge engineering for most specialized DoD/IC domains. Large language models, such as ChatGPT, are NLP tools that generate new text artifacts based on next work prediction from a large foundation model of curated reference corporas.
+A variety of NLP tools exist. All require significant machine learning training or knowledge engineering for most specialized DoW/IC domains. Large language models, such as ChatGPT, are NLP tools that generate new text artifacts based on next work prediction from a large foundation model of curated reference corporas.
 
 ### Relational Database to RDF Mapping Language
 
@@ -90,7 +90,7 @@ There are many language standards that support ontology design pattern tasks or 
 
 ## List of Tools and Frameworks
 
-The tools below are roughly grouped by type (e.g., ontology development environment, knowledge graph, reasoning) but some tools cover multiple functions. Like in many software and AI technology areas, there is a continuous debate about the advantages and disadvantages of open-source software vs. commercial products. In the OWL ecosystem, commercial products are in general ahead of open-source frameworks especially in the category of knowledge graph and reasoning tools. Even the widely accepted and used Protégé is being left behind. The DoD/IC should carefully consider whether or not they should select a designated set of tools or build their own set of tools because commercial products are advancing rapidly. It is probably best to adhere to OWL, RDF, and SPARQL standards and swap in new tools as they become available.
+The tools below are roughly grouped by type (e.g., ontology development environment, knowledge graph, reasoning) but some tools cover multiple functions. Like in many software and AI technology areas, there is a continuous debate about the advantages and disadvantages of open-source software vs. commercial products. In the OWL ecosystem, commercial products are in general ahead of open-source frameworks especially in the category of knowledge graph and reasoning tools. Even the widely accepted and used Protégé is being left behind. The DoW/IC should carefully consider whether or not they should select a designated set of tools or build their own set of tools because commercial products are advancing rapidly. It is probably best to adhere to OWL, RDF, and SPARQL standards and swap in new tools as they become available.
 
 ### Ontology Development
 
@@ -104,7 +104,7 @@ The tools below are roughly grouped by type (e.g., ontology development environm
 
 ### Catalogs
 
-* Agent Tool (DOD/IC Ontology Foundry and Johns Hopkins Applied Physics Lab)
+* Agent Tool (DoW/IC Ontology Foundry and Johns Hopkins Applied Physics Lab)
     * Agent Tool provides a way to search a curated library of ontologies.
     * It also provides tools for checking ontologies for compliance to documentation standards and eventually semantic consistency with reasoners.
 
@@ -130,7 +130,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 
 * **spaCy and Prodigy**: Prodigy is used to label training data and spaCy learns to parse sentences based on that training data. These are widely used tools.[^39]
 * **Lymba**: A commercial tool that uses hybrid machine learning and semantic knowledge. Lymba Jaguar uses NLP to extract candidate terms for ontologies.[^40]
-* **Gamechanger**: Developed by DoD and has been tailored for some DoD domains. It currently does not output RDF/OWL.[^41]
+* **Gamechanger**: Developed by DoW and has been tailored for some DoW domains. It currently does not output RDF/OWL.[^41]
 
 ### Text Editors
 
@@ -192,7 +192,7 @@ Triple Stores for knowledge graphs are being scaled up to handle large amounts o
 [^38]: [TigerGraph](https://www.tigergraph.com/)
 [^39]: [spaCy](https://spacy.io/) and [Prodigy](https://prodi.gy/)
 [^40]: [Lymba](https://www.lymba.com/)
-[^41]: [Gamechanger](https://github.com/dod-advana/gamechanger)
+[^41]: [Gamechanger](https://github.com/DoW-advana/gamechanger)
 [^42]: [VS Code](https://code.visualstudio.com/)
 [^43]: [Notepad++](https://notepad-plus-plus.org/)
 [^44]: [NiFi](https://nifi.apache.org/)

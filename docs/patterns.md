@@ -1,17 +1,17 @@
 # Patterns
 
-## DoD/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
+## DoW/IC Ontology Working Group - Operationalizing Ontologies Community of Interest
 
 **Contributors:** Paul Kogut, Don Pellegrino, Jonathan Vajda, John Beverley, Joe Blankenship, Eric Peterson, Tim Toohill, Jennifer DeCamp, Ali Hasanzedah, John Judkins, Amanda Mitchell
 
 ## Introduction
 
-The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoD/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoD/IC personnel identify opportunities to insert ontologies into current and future systems.
+The goal of the Operationalizing Ontologies Community of Interest (OO-COI) is to provide guidance on how to apply ontologies in DoW/IC operational systems (e.g., C2, ISR, mission planning, equipment maintenance, logistics) and internal business systems. Current guidance is scattered across many sources and has significant gaps. The intended audience is both non-technical mission-focused personnel and very technical developers. Education of project managers, software architects, and junior software developers is a major barrier to fully leveraging the benefits of ontologies. The OO-COI will help DoW/IC personnel identify opportunities to insert ontologies into current and future systems.
 
 This document contains a list of common domain-independent ontology application patterns and associated appropriate architectures. We are using the term “application pattern” instead of “use case” because use case often refers to aspects of applications related to domain-specific ontologies (e.g., air defense, aircraft maintenance, etc.). Most of the patterns listed below are fairly general and not focused on specific missions or equipment.
 
 > [!NOTE]
-> This document assumes use of DoD/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoD/IC Ontology Foundry; not publicly available). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
+> This document assumes use of DoW/IC Foundry-compliant semantic infrastructure that includes OWL 2, RDF, and SPARQL (see _Guidance for Ontology-based Systems Development_, DoW/IC Ontology Foundry; not publicly available). Many, but not all, patterns will need some form of rules for implementation (e.g., Semantic Web Rule Language (SWRL)).
 
 ## Application Patterns
 
@@ -52,7 +52,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Description
   * Semantic interoperability to integrate heterogeneous data for conventional enterprise systems, AI applications, and data analytics applications (aka a data fabric).
 * Use cases
-  * The ontology serves as a lingua franca between heterogeneous sources. The focus is on command centers, backend computing, and cloud-based systems. This is where semantic interoperability challenges for DoD/IC are similar to those found in commercial industry.
+  * The ontology serves as a lingua franca between heterogeneous sources. The focus is on command centers, backend computing, and cloud-based systems. This is where semantic interoperability challenges for DoW/IC are similar to those found in commercial industry.
   * OWL supports explicit mappings between existing ontologies via equivalentClass and equivalentProperty. This can be used to bridge between 2 domains (e.g., Army and Navy). See these books for a thorough discussion of semantic interoperability and ontology engineering.[^2][^5]
 
 ### Battlefield semantic interoperability
@@ -111,7 +111,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Description
   * Search for sources of relevant structured data across an enterprise for the purpose of data analytics often for management purposes.
 * Use cases
-  * DoD Chief Digital and Artificial Intelligence Office (CDAO) projects
+  * DoW Chief Digital and Artificial Intelligence Office (CDAO) projects
 
 ### Digital assistants and question answering systems
 
@@ -127,7 +127,7 @@ Fields marked _Help wanted_ have not been drafted yet. To contribute, find the m
 * Terms
   * answering system, digital assistant, agent, LLM
 * Description
-  * Recently, systems based on Large Language Models (LLM) such as ChatGPT have exploded in popularity.[^6] They can be used for general question answering and generation of natural language text paragraphs and reports. However, they often generate wrong answers (hallucinate) and are difficult to train to answer domain-specific questions relevant to DoD/IC. However, ontologies and LLMs are complementary technologies.[^10] Hybrid question-answering systems may solve some of the problems with hallucination and lack of DoD/IC domain knowledge.
+  * Recently, systems based on Large Language Models (LLM) such as ChatGPT have exploded in popularity.[^6] They can be used for general question answering and generation of natural language text paragraphs and reports. However, they often generate wrong answers (hallucinate) and are difficult to train to answer domain-specific questions relevant to DoW/IC. However, ontologies and LLMs are complementary technologies.[^10] Hybrid question-answering systems may solve some of the problems with hallucination and lack of DoW/IC domain knowledge.
 * Use cases
   * Siri, Alexa, ChatGPT
   * The ontology provides semantic interoperability between front-end natural language processing of questions and commands and SPARQL queries submitted to backend knowledge graphs.
